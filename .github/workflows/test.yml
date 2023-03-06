@@ -5,6 +5,7 @@ on: [push]
 
 jobs:
   Explore-GitHub-Actions:
+    runs-on: self-hosted, macOS, X64
     steps:
       - name: test
         run: |
