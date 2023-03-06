@@ -1,0 +1,14 @@
+name: GitHub Actions Demo
+run-name: testing out GitHub Actions
+
+on: [push]
+
+jobs:
+  Explore-GitHub-Actions:
+    steps:
+      - name: test
+        run: |
+          RESULT: $(python3 main.py)
+          echo "RESULT:${RESULT}" >> $GITHUB_ENV
+
+

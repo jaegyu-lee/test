@@ -1,0 +1,3 @@
+RESULT = "result"
+
+print(RESULT)
