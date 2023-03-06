@@ -1,7 +1,11 @@
+
 name: GitHub Actions Demo
 run-name: testing out GitHub Actions
 
-on: [push]
+on:
+  push:
+    branches : 
+      main
 
 jobs:
   Explore-GitHub-Actions:
