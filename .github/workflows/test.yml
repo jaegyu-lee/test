@@ -22,5 +22,5 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Test echo
       run: |
-        RESULT:$(python3 main.py)
+        RESULT: $(python3 main.py)
         echo $RESULT
