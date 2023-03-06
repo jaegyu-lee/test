@@ -3,8 +3,9 @@ name: GitHub Actions Demo
 run-name: testing out GitHub Actions
 
 on:
-  -branches : 
-    dev
+  push:
+    branches : 
+      main
 
 jobs:
   Explore-GitHub-Actions:
