@@ -1,19 +1,26 @@
-
-name: GitHub Actions Demo
-run-name: testing out GitHub Actions
-
-on:
-  push:
-    branches : 
-      main
-
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: self-hosted
-    steps:
-      - name: test
+ name: Python application
+	
+  on:
+    push:
+      branches: main
+	
+  jobs:
+    build:
+	
+      runs-on: ubuntu-latest
+	
+      steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: Install dependencies
         run: |
-          A: $(python3 test.py)
-          echo "A:${A}" >> $GITHUB_ENV
-
-
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Test echo
+        run: |
+          RESULT:$(python3 main.py)
+          echo $RESULT
