@@ -1,0 +1,4 @@
+A = "result"
+
+
+print(A)

@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: test
         run: |
-          RESULT: $(python3 main.py)
-          echo "RESULT:${RESULT}" >> $GITHUB_ENV
+          A: $(python3 main.py)
+          echo "A:${A}" >> $GITHUB_ENV
 
 
